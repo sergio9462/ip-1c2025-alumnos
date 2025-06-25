@@ -25,9 +25,10 @@ def getAllImages():
 def filterByCharacter(name):
     filtered_cards = []
 
-    for card in getAllImages():
-        # debe verificar si el name está contenido en el nombre de la card, antes de agregarlo al listado de filtered_cards.
-        filtered_cards.append(card)
+    for card in getAllImages(): #Recorre las tarjetas de la función que trae todas las imágenes
+        if name.lower() in card.name.lower(): #Verifica si el name esta contenido en el nombre de la card antes de agregarlo a listado de filtros,filtered_cards.
+        
+            filtered_cards.append(card) #En caso de ser asi agrega la card
 
     return filtered_cards
 
