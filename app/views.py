@@ -21,7 +21,7 @@ def search(request):
 
     # si el usuario ingresó algo en el buscador, se deben filtrar las imágenes por dicho ingreso.
     if (name != ''):
-        images = []
+        images = services.filterByCharacter(name) #en esta línea de código se obtiene la card filtrada para mostrarla en pantalla.
         favourite_list = []
 
         return render(request, 'home.html', { 'images': images, 'favourite_list': favourite_list })
